@@ -1,0 +1,17 @@
+<div class="container mt-5" *ngIf="moments">
+  <div class="d-flex gap-3 justify-content-center flex-wrap"  >
+    <div class="" *ngFor="let moment of moments">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" [src]="moment.image"
+             alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{moment.title}}</h5>
+          <p class="card-text"><i class="bi bi-calendar m-2"></i>{{moment.createdAt}}</p>
+          <p class="card-text"><i class="bi bi-chat m-2"></i>Coments: {{moment.comments.length}}</p>
+          <a routerLink="/moments/{{moment.id}}" class="btn btn-dark"><i class="bi bi-eye m-1"></i>ver mais</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="message p-2" *ngIf="messageService.message">
+  <div class="message-header d-flex justify-content-between mb-1">
+    <h2>Mensagem do sistema:</h2>
+    <button class="btn btn-primary" (click)="messageService.clear()">
+      <i class="bi bi-x fs-5"></i>
+    </button>
+  </div>
+  <p>{{ messageService.message }}</p>
+</div>

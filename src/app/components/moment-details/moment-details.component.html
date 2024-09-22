@@ -1,0 +1,57 @@
+
+<div class="container min-vh-100" *ngIf="moment">
+  <div>
+    <h1>
+      {{ moment.title }}
+    </h1>
+    <div>
+      <img class="img-fluid" [src]="moment.image">
+    </div>
+    <h2 class="fs-3">Sobre este momento</h2>
+    <p>{{moment.description}}</p>
+  </div>
+  <div>
+    <h3 class="fs-4">Ações</h3>
+    <div >
+      <a class="btn btn-outline-danger" (click)="remover(moment.id)" ><i class="bi bi-x-lg mx-2 text-danger"></i>Excluir</a>
+      <a class="btn btn-outline-primary m-3" routerLink="/editar/{{moment.id}}" ><i class="bi  bi-pencil-square mx-2 text-primary"></i>Editar</a>
+
+    </div>
+  </div>
+
+  <div class="my-5">
+    <h4>Comentários({{ moment.comments.length }}):</h4>
+    <ul class="list-group">
+      <li class="list-group-item">
+        comentario
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <form action="" method="post">
+      <div class="mb-2">
+        <label>
+          Comentario
+        </label>
+        <textarea class="form-control">
+
+        </textarea>
+      </div>
+      <div class="mb-2">
+        <label>
+          Comentario
+        </label>
+        <input class="form-control" type="text">
+      </div>
+      <div>
+        <button class="btn btn-primary">
+          Comentar
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+
+</div>
