@@ -6,7 +6,7 @@
       <div class="">
         <div class="">
           <div class="border border-1 border-black rounded-5 p-2">
-            <div class="d-flex "><i class='bx bxs-map'></i> <input type="text" class="border-0 no-focus-outline" placeholder="San Francisco,USA">
+            <div class="d-flex "><i class='bx bxs-map'></i> <input type="text" #searchtext class="border-0 no-focus-outline" placeholder="San Francisco,USA" (input)="search(searchtext.value)">
               <button class="bg-transparent border-0 "><i class="bi bi-search"></i></button>
             </div>
           </div>

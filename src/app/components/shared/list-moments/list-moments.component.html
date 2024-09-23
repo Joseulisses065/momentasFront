@@ -1,6 +1,6 @@
-<div class="container mt-5" *ngIf="moments">
+<div class="container mt-5" *ngIf="searchMoments.length>0; else noMoments">
   <div class="d-flex gap-3 justify-content-center flex-wrap"  >
-    <div class="" *ngFor="let moment of moments">
+    <div class="" *ngFor="let moment of searchMoments">
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" [src]="moment.image"
              alt="Card image cap">
@@ -15,3 +15,10 @@
     </div>
   </div>
 </div>
+<ng-template #noMoments>
+  <div class="container text-center mt-5">
+    <h2 class="fs-3">Não há momentos registrados</h2>
+  </div>
+
+
+</ng-template>

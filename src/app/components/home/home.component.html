@@ -1,2 +1,3 @@
-<app-search></app-search>
-<app-list-moments></app-list-moments>
+<app-search (newEvent)="search($event)"></app-search>
+<app-list-moments [searchText] ="searchText" ></app-list-moments>
+
