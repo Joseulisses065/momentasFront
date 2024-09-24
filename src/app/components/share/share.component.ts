@@ -18,8 +18,6 @@ export class ShareComponent {
 
 
   async createHandler(event: Moment) {
-    console.log(event)
-
     //enviar para o service
     await this.service.create(event).subscribe();
     //exibir mensagem

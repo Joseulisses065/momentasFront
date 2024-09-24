@@ -24,8 +24,8 @@ export class ListMomentsComponent implements OnInit {
     })
   }
 
-  getAll(){
-    this.momentService.findAll().subscribe(res=>{
+  async getAll(){
+    await this.momentService.findAll().subscribe(res=>{
       this.moments=res;
       this.searchMoments = res;
     })

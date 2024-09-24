@@ -3,6 +3,7 @@
     <label>
       Título
     </label>
+    <input type="hidden" formControlName="id">
     <input class="form-control" type="text" placeholder="Coloque um títulos" formControlName="title" required/>
     <div *ngIf="title!.invalid && formDir.submitted" class="alert-danger">
       <p *ngIf="title?.errors?.['required']" class="text-danger">O titulo é obrigatorio</p>

@@ -19,15 +19,15 @@ export class MomentDetailsComponent implements OnInit {
     this.findById()
   }
 
-  findById() {
+  async  findById() {
     const id: string | null = this.route.snapshot.paramMap.get("id");
-    this.momentService.findById(Number(id)).subscribe(res => {
+    await this.momentService.findById(Number(id)).subscribe(res => {
       this.moment = res;
     })
   }
 
-  remover(id: number) {
-    this.momentService.delete(id).subscribe();
+  async  remover(id: number) {
+    await this.momentService.delete(id).subscribe();
     this.messages.add("Momento removido com successo")
     this.router.navigate(['/']);
   }

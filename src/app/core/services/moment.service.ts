@@ -31,4 +31,9 @@ export class MomentService {
     return this.http.post<Moment>(`${this.API}`,moment)
 
   }
+
+  update(id: number, moment: Moment) {
+    const url = `${this.API}/${id}`
+    return this.http.post<Moment>(url, moment)
+  }
 }
